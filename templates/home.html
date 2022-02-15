@@ -4,9 +4,11 @@
     <title></title>
 </head>
 <body>
-
-<h1>Home</h1>
-<p>My first paragraph in home </p>
+    {% for posts in posts %}
+        <h1>{{ posts.title }}</h1>
+        <h3> by {{ posts.author }} on {{ posts.date_posted }} </h3>
+        <p>{{ posts.content }}</p>
+    {%endfor%}
 
 </body>
 </html>
