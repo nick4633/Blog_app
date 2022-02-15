@@ -1,18 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    {% if title %}
-        <title>flash blog - {{ title }} </title>
-    {% else %}
-        <title>flash blog</title>
-    {% endif %}
-</head>
-<body>
-    {% for posts in posts %}
+{% extends "layout.html" %}
+{% block content %}
+{% for posts in posts %}
         <h1>{{ posts.title }}</h1>
         <h3> by {{ posts.author }} on {{ posts.date_posted }} </h3>
         <p>{{ posts.content }}</p>
     {%endfor%}
-
-</body>
-</html>
+{% endblock content %}
